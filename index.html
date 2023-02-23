@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" href="CSS/main.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+        />
+        <script src="JS/jquery-3.5.1.min.js"></script>
+        <script src="JS/multislider.min.js"></script>
+        <title>Lowe's Strutar</title>
+    </head>
+    <body>
+        <nav>
+            <div class="navbar-top">
+                <div>
+                    <button id="menuButton"></button>
+                    <!--Logo-->
+                    <img class="logo" src="images/producs-images/Glassar/ice-cream-g8c2212216_1280.png" style="width: 100px; padding-bottom:10px;">
+                </div>
+                <div>
+                    </div>
+                    <!--Shopping cart-->
+                    <div class="shopping-cart">
+                        <div class="sum-prices">
+                            <!--Shopping cart logo-->
+                            <i
+                                class="fas fa-shopping-cart shoppingCartButton"
+                            ></i>
+                            <!--Totala priset av varor i shoppingcart -->
+                            <h6 id="sum-prices"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="producstOnCart hide">
+                <div class="overlay"></div>
+                <div class="top">
+                    <button id="closeButton">
+                        <i class="fas fa-times-circle"></i>
+                    </button>
+                    <h3>Kassa</h3>
+                </div>
+                <ul id="buyItems">
+                    <h4 class="empty">Din kassa är tom</h4>
+                </ul>
+                <button class="btn checkout hidden" onclick="removeListElements()" > <a href="utcheckning.html">Utcheckning</a></button>
+            </div>
+        </nav>
+
+        <!--Min header med bytande bilder-->
+        <header id="headerSlide">
+            <div class="MS-content">
+                <a class="item">
+                    <img src="Images/producs-images/Glassar/ice-cream-gecbd6dce7_1920.jpg"/>
+                </a>
+                <a class="item">
+                    <img src="Images/producs-images/Glassar/ice-cream-g8c2212216_1280.png" />
+                </a>
+                <a class="item">
+                    <img src="Images/producs-images/Glassar/ice-cream-gee7c16b5f_1920.jpg" />
+                </a>
+                <a class="item">
+                    <img src="Images/producs-images/Glassar/ice-cream-gecbd6dce7_1920.jpg" />
+                </a>
+                <a class="item">
+                    <img src="Images/producs-images/Glassar/ice-cream-g8c2212216_1280.png" />
+                </a>
+                <a class="item">
+                    <img src="Images/producs-images/Glassar/ice-cream-gee7c16b5f_1920.jpg" />
+                </a>
+
+            <!--Knapparna som byter bild på headern-->
+            </div>
+            <div class="MS-controls">
+                <button class="MS-right">
+                    <i class="fas fa-chevron-right fa-3x"></i>
+                </button>
+                <button class="MS-left">
+                    <i class="fas fa-chevron-left fa-3x"></i>
+                </button>
+            </div>
+        </header>
+
+        <!--Glassutbudet-->
+        <main>
+            <section class="main-section">
+                <div class="product-container">
+                    <h3>Storsäljare!</h3>
+                    <div class="products">
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="Images/producs-images/Glassar/popsicle-gac23c6777_1280.png"
+                                        alt="bild av en Glasspinne"
+                                        style="width: 100px; transform: translate(0,10%);"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="1"
+                                            style="transform: translate(0,100%);"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Lägg 
+                                            till i kassa
+                                        </button>
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">Glasspinne</h4>
+                                    <p>
+                                        En helt otroligt god glasspinne som tillfredställer även de kräsnaste av smaklökar på de tråkigaste tungorna. Den smakar choklad.
+                                    </p>
+                                    <h6 class="price">
+                                        <span class="priceValue">25</span>:-
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="Images/producs-images/Glassar/ice-cream-gee7c16b5f_1920.jpg"
+                                        alt="En strut med glasskulor i en hand"
+                                        style="width: 375px;"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="2"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Lägg
+                                            till i kassa
+                                        </button>
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">Glasstrut, hallon och kaffe</h4>
+                                    <p>
+                                        Ja vi serverar bara kaffe och hallonsorbét och Ja kulorna serveras smältna; det känns sommrigt. En våffelstrut med två glasskulor av smaken kaffe och hallonsorbét. 
+                                    </p>
+                                    <h6 class="price">
+                                        <span class="priceValue">45</span>:-
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="Images/producs-images/Glassar/ice-cream-gecbd6dce7_1920.jpg"
+                                        alt="en isglass med tropiska frukter av olika slag"
+                                        style="width: 331px;"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="3"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Lägg 
+                                            till i kassa
+                                        </button>
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">Isglass, smak av kumquat, mynta och apelsin</h4>
+                                    <p>
+                                        Vi är medvetna om att den här kostar lite mycket men det är okej eftersom den kostade mycket att göra. Däremot så smakar den väldigt gott.
+                                    </p>
+                                    <h6 class="price">
+                                        <span class="priceValue">95</span>:-
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img
+                                        src="Images/producs-images/Glassar/ice-cream-g4a5037a58_1920.png"
+                                        alt="bild av en Glasspinne"
+                                        style="width: 150px;"
+                                    />
+                                    <div class="product-over">
+                                        <button
+                                            class="btn btn-small addToCart"
+                                            data-product-id="4"
+                                            style="transform: translate(0,50%);"
+                                        >
+                                            <i class="fas fa-cart-plus"></i>Lägg 
+                                            till i kassa
+                                        </button>
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">Den Andra Glasspinnen</h4>
+                                    <p>
+                                        En helt otroligt god glasspinne som tillfredställer även de kräsnaste av smaklökar på de tråkigaste tungorna. Den smakar mörk choklad.
+                                    </p>
+                                    <h6 class="price">
+                                        <span class="priceValue">30</span>:-
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--Sista delen av hemsidan-->
+        <footer>
+            <div class="footer-second">
+                <div class="footer-column-1">
+                    <h3>Nyheter</h3>
+                    <a href="#">Kumquat och mynta</a>
+                    <a href="#">Hallon och kaffe</a>
+                </div>
+                <div class="footer-column-2">
+                    <h3>Kundtjänst</h3>
+                    <a href="#">Kontaktuppgifter</a>
+                    <a href="#">Reklamera ditt köp</a>
+                    <a href="#">Vanliga frågor</a>
+                </div>
+                <div class="footer-column-3">
+                    <h3>Om oss</h3>
+                    <a href="#">Vilka är vi?</a>
+                    <a href="#">Vilka är våra leverantörer</a>
+                </div>
+            </div>
+        </footer>
+
+        <!--Länkar till mina JS-mappar-->
+        <script src="JS/script.js"></script>
+        <script src="shopping-cart.js"></script>
+    </body>
+</html>
