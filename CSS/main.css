@@ -530,6 +530,10 @@ main {
 }
 
 .btn-small {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
     position: relative;
     top: -100%;
     border: none;
