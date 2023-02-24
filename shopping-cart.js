@@ -51,7 +51,7 @@ const updateShoppingCartHTML = function () {  // 3
 
 
 //Funktion för utcheckningen, tar bort varor ur shoppingcart
-function removeListElements(product) {
+function removeListElements() {
 	var parent = document.getElementById('buyItems');
 	var child = parent.getElementsByTagName('li')[0];
 	parent.removeChild(child);
