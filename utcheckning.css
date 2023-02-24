@@ -1,0 +1,18 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ruta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 250px;
+    font-size: 20px;
+    background-color: #73d7de;
+    border-radius: 6px;
+}
