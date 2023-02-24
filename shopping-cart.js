@@ -44,7 +44,7 @@ const updateShoppingCartHTML = function () {  // 3
 	}
 	else {
 		document.querySelector('.checkout').classList.add('hidden');
-		parentElement.innerHTML = '<p class="empty">Din kassa är tom</p>';
+		parentElement.innerHTML = '<li class="empty">Din kassa är tom</li>';
 		cartSumPrice.innerHTML = '';
 	}
 }
@@ -57,7 +57,7 @@ function removeListElements(product) {
 	parent.removeChild(child);
 	productsInCart = [];
 	document.querySelector('.checkout').classList.add('hidden');
-	parentElement.innerHTML = '<p class="empty">Din kassa är tom</p>';
+	parentElement.innerHTML = '<li class="empty">Din kassa är tom</li>';
 	updateShoppingCartHTML();
 	return;
 }
